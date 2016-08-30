@@ -1,10 +1,9 @@
 import React from 'react';
 import Styles from '../styles'
 
-const Prompt = (props) => {
-
-  return (
-    <div className="jumbotron col-sm-6 col-sm-offset-3 text-center " style={Styles.transparentBg}>
+const Prompt = (props) =>
+    (
+      <div className="jumbotron col-sm-6 col-sm-offset-3 text-center " style={Styles.transparentBg}>
       <h1> {props.header} </h1>
       <div className='col-sm-12'>
         <form onSubmit={props.onSubmitUser}>
@@ -26,8 +25,7 @@ const Prompt = (props) => {
         </form>
       </div>
     </div>
-  )
-}
+  );
 
 Prompt.propTypes = {
   header: React.PropTypes.string.isRequired,
