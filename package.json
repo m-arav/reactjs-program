@@ -13,8 +13,10 @@
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.1.0",
+    "raven-js": "^3.5.1",
     "react": "^15.3.1",
-    "react-dom": "^15.3.1"
+    "react-dom": "^15.3.1",
+    "react-router": "^2.7.0"
   },
   "devDependencies": {
     "and": "0.0.0",
