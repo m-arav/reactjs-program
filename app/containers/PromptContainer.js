@@ -6,9 +6,9 @@ class PromptContainer extends React.Component {
     super(props);
 
     // Set up initial state
-    this.state = {
-      username: ''
-    };
+      this.state = {
+        username: ''
+      };
 
     this.handleUpdateUser = this.handleUpdateUser.bind(this);
     this.handleSubmitUser = this.handleSubmitUser.bind(this);
