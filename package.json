@@ -12,6 +12,7 @@
   "author": "Aravind M",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.14.0",
     "jquery": "^3.1.0",
     "raven-js": "^3.5.1",
     "react": "^15.3.1",
