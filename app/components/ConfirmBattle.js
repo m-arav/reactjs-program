@@ -1,6 +1,7 @@
 import React from 'react';
 import Styles from '../styles';
 import {Link} from 'react-router';
+import UserDetails from './UserDetails';
 
 function puke (object) {
   return <pre>{JSON.stringify(object, null, '')}</pre>
@@ -14,14 +15,12 @@ const ConfirmBattle = (props) => (
                 : <div className="jumbotron col-sm-12 text-center" style={Styles.transparentBg}>
                     <h1>Confirm Players</h1>
                     <div className="col-sm-8 col-sm-offset-2">
-                      <div className="col-sm-6">
-                        <p className="lead">Player 1</p>
-                        {puke(props.playersInfo[0])}
-                      </div>
-                      <div className="col-sm-6">
-                        <p className="lead">Player 2</p>
-                        {puke(props.playersInfo[1])}
-                      </div>
+                      <UserDetailsWrapper header="Player One">
+                        <UserDetails info={props.playersInfo[0]} />
+                      </UserDetailsWrapper>
+                      <UserDetailsWrapper header="Player Two">
+                        <UserDetails info={props.playersInfo[1]} />
+                      </UserDetailsWrapper>
                     </div>
                     <div className="col-sm-8 col-sm-offset-2">
                       <div className="col-sm-12" style={Styles.space}>
