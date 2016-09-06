@@ -2,18 +2,13 @@ import React from 'react';
 import Styles from '../styles';
 import {Link} from 'react-router';
 import UserDetails from './UserDetails';
-import UserDetailsWrapper from './UserDetailsWrapper'
-
-function puke (object) {
-  return <pre>{JSON.stringify(object, null, '')}</pre>
-}
-
-
-
+import UserDetailsWrapper from './UserDetailsWrapper';
+import MainContainer from './Maincontainer';
+import Loading from './Loading';
 const ConfirmBattle = (props) => (
   props.isLoading === true
-                ? <p> Loading </p>
-                : <div className="jumbotron col-sm-12 text-center" style={Styles.transparentBg}>
+                ? <Loading speed={800} text='Aravind' />
+                : <MainContainer>
                     <h1>Confirm Players</h1>
                     <div className="col-sm-8 col-sm-offset-2">
                       <UserDetailsWrapper header="Player One">
@@ -35,7 +30,7 @@ const ConfirmBattle = (props) => (
                         </Link>
                       </div>
                     </div>
-                </div>
+                </MainContainer>
 );
 
 ConfirmBattle.propTypes = {
