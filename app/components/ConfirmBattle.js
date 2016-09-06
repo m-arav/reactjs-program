@@ -2,6 +2,7 @@ import React from 'react';
 import Styles from '../styles';
 import {Link} from 'react-router';
 import UserDetails from './UserDetails';
+import UserDetailsWrapper from './UserDetailsWrapper'
 
 function puke (object) {
   return <pre>{JSON.stringify(object, null, '')}</pre>
